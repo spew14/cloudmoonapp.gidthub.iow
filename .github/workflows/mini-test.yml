@@ -1,0 +1,14 @@
+name: Minimal Official Runner Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: macbook
+    steps:
+      - name: Print hello
+        run: |
+          echo "✅ Runner is working! $(hostname)"
+          echo "GitHub Actor: $GITHUB_ACTOR"
+          echo "Repository: $GITHUB_REPOSITORY"
